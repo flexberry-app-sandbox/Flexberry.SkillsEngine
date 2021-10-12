@@ -1,0 +1,1 @@
+docker-compose -p skillsengine up -d

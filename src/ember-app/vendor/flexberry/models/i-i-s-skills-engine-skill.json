@@ -1,0 +1,134 @@
+﻿{
+  "name": "IISSkillsEngineSkill",
+  "modelName": "i-i-s-skills-engine-skill",
+  "className": "Skill",
+  "nameSpace": "IIS.SkillsEngine",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "parentSkill",
+      "relatedTo": "i-i-s-skills-engine-skill",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "educationalMaterials",
+      "relatedTo": "i-i-s-skills-engine-skill-training",
+      "inverse": "skill"
+    }
+  ],
+  "projections": [
+    {
+      "name": "SkillE",
+      "modelName": "i-i-s-skills-engine-skill",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "description",
+          "caption": "Description",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "ParentSkill",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Parent skill",
+          "name": "parentSkill",
+          "relatedTo": "i-i-s-skills-engine-skill",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "SkillTrainingE",
+          "caption": "Educational materials",
+          "name": "educationalMaterials",
+          "relatedTo": "i-i-s-skills-engine-skill-training",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "SkillL",
+      "modelName": "i-i-s-skills-engine-skill",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "description",
+          "caption": "Description",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "ParentSkill",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [],
+          "index": 2,
+          "type": "default",
+          "caption": "Name",
+          "name": "parentSkill",
+          "relatedTo": "i-i-s-skills-engine-skill",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

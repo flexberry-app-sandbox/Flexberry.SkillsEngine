@@ -1,0 +1,29 @@
+﻿{
+  "applicationCaption": "Skills engine",
+  "applicationTitle": "Skills engine",
+  "items": [
+    {
+      "link": null,
+      "menuName": "skills-engine",
+      "caption": "SkillsEngine",
+      "title": "SkillsEngine",
+      "children": [
+        {
+          "link": "i-i-s-skills-engine-skill-l",
+          "menuName": null,
+          "caption": "Skill",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-skills-engine-person-l",
+          "menuName": null,
+          "caption": "Person",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

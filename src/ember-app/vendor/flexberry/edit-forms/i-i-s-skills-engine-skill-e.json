@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "ParentSkill",
+      "projection": "SkillL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Skill",
+  "name": "IISSkillsEngineSkillE",
+  "className": "SkillE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-skills-engine-skill",
+      "modelProjection": "SkillE"
+    }
+  ]
+}

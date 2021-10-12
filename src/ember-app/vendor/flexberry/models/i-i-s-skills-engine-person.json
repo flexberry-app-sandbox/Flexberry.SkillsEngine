@@ -1,0 +1,68 @@
+﻿{
+  "name": "IISSkillsEnginePerson",
+  "modelName": "i-i-s-skills-engine-person",
+  "className": "Person",
+  "nameSpace": "IIS.SkillsEngine",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "skills",
+      "relatedTo": "i-i-s-skills-engine-person-skill",
+      "inverse": "person"
+    }
+  ],
+  "projections": [
+    {
+      "name": "PersonE",
+      "modelName": "i-i-s-skills-engine-person",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "PersonSkillE",
+          "caption": "Skills",
+          "name": "skills",
+          "relatedTo": "i-i-s-skills-engine-person-skill",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "PersonL",
+      "modelName": "i-i-s-skills-engine-person",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "skill",
+      "displayAttributeName": "name",
+      "required": true,
+      "relationName": "Skills.Skill",
+      "projection": "SkillL",
+      "detailModelName": "i-i-s-skills-engine-person-skill"
+    }
+  ],
+  "external": false,
+  "caption": "Person",
+  "name": "IISSkillsEnginePersonE",
+  "className": "PersonE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-skills-engine-person",
+      "modelProjection": "PersonE"
+    }
+  ]
+}

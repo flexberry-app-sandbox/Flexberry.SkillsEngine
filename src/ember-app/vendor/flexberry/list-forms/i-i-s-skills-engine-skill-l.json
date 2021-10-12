@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-skills-engine-skill-e",
+  "editForm": "i-i-s-skills-engine-skill-e",
+  "external": false,
+  "caption": "Skill",
+  "name": "IISSkillsEngineSkillL",
+  "className": "SkillL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-skills-engine-skill",
+      "modelProjection": "SkillL"
+    }
+  ]
+}

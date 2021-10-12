@@ -1,0 +1,63 @@
+﻿{
+  "name": "IISSkillsEngineSkillTraining",
+  "modelName": "i-i-s-skills-engine-skill-training",
+  "className": "SkillTraining",
+  "nameSpace": "IIS.SkillsEngine",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "skill",
+      "relatedTo": "i-i-s-skills-engine-skill",
+      "inverse": "educationalMaterials"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "SkillTrainingE",
+      "modelName": "i-i-s-skills-engine-skill-training",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "url",
+          "caption": "Url",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

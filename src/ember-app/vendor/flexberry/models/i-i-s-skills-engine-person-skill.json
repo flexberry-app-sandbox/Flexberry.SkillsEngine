@@ -1,0 +1,77 @@
+﻿{
+  "name": "IISSkillsEnginePersonSkill",
+  "modelName": "i-i-s-skills-engine-person-skill",
+  "className": "PersonSkill",
+  "nameSpace": "IIS.SkillsEngine",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "approvedAt",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "skill",
+      "relatedTo": "i-i-s-skills-engine-skill",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "person",
+      "relatedTo": "i-i-s-skills-engine-person",
+      "inverse": "skills"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "PersonSkillE",
+      "modelName": "i-i-s-skills-engine-person-skill",
+      "attrs": [
+        {
+          "name": "approvedAt",
+          "caption": "Approved at",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Skill",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Skill",
+          "name": "skill",
+          "relatedTo": "i-i-s-skills-engine-skill",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
