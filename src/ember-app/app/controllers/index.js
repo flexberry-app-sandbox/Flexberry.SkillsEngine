@@ -22,13 +22,13 @@ export default Controller.extend({
             link: 'i-i-s-skills-engine-skill-l',
             caption: i18n.t('forms.application.sitemap.skills-engine.i-i-s-skills-engine-skill-l.caption'),
             title: i18n.t('forms.application.sitemap.skills-engine.i-i-s-skills-engine-skill-l.title'),
-            icon: 'book',
+            icon: 'archive',
             children: null
           }, {
             link: 'i-i-s-skills-engine-person-l',
             caption: i18n.t('forms.application.sitemap.skills-engine.i-i-s-skills-engine-person-l.caption'),
             title: i18n.t('forms.application.sitemap.skills-engine.i-i-s-skills-engine-person-l.title'),
-            icon: 'building',
+            icon: 'book',
             children: null
           }]
         }
