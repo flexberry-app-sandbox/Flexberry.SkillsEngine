@@ -9,7 +9,7 @@
     "Validate": false,
     "Frontend": {
       "EmberJs": {
-        "EmberApp": true,
+        "EmberApp": false,
         "EmberAddon": false,
         "Build": false,
         "GitClone": false,
